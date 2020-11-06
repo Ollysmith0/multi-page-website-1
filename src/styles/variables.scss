@@ -1,0 +1,35 @@
+$peach: #E7816B;
+$peach-active: #FFAD9B;
+$black: #1D1C1E;
+$black-active: #333136;
+$white: #FFF;
+$white-active: #F1F3F5;
+$black-link: #333136;
+$default: #F2F2F2;
+$card-bg: #FDF3F0;
+
+@mixin heading-h1{
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 48px;
+}
+
+@mixin heading-h2{
+  font-size: 480px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 2px;
+}
+
+@mixin heading-h3{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 5px;
+}
+
+
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 375px;
+$breakpoint-desktop: 1440px;
+

@@ -1,0 +1,121 @@
+@import '../../../../styles/common.scss';
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/reset.scss';
+@import '../../../../styles/responsive.scss';
+
+.card-layout{
+  @include container;
+  height: 850px;
+
+  @include d-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 30px;
+  }
+
+}
+
+.container-app-design-categories{
+  @include container;
+  @include d-grid{
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+  margin-bottom: 377px;
+
+  .left-design{
+
+    .app-design{
+      cursor: pointer;
+      background-image: url(../../../../styles/images/image-app-design.jpg);
+      width: 541px;
+      height: 308px;
+      border-radius: 20px;
+
+      @include relative;
+
+      @include d-flex{
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover > .overlay{
+        background-color: $peach-active;
+      }
+
+      &:hover .content-d .second-title{
+        padding-right: 25px;
+      }
+
+      .content-d{
+        @include absolute{
+          z-index: 1;
+        }
+
+        @include content-d{
+          text-align: center;
+          color: $white;
+          text-transform: uppercase;
+        }
+        .second-title{
+          display: inline-block;
+          font-size: 15px;
+          letter-spacing: 5px;
+          color: $white;
+        }
+      }
+
+      .overlay{
+        @include overlay;
+      }
+    }
+  }
+
+  .right-design{
+
+    .graphic-design{
+      background-image: url(../../../../styles/images/image-graphic-design.jpg);
+      width: 541px;
+      height: 308px;
+      border-radius: 20px;
+      
+      @include relative;
+
+      @include d-flex{
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover > .overlay{
+        background-color: $peach-active;
+      }
+
+      &:hover .content-d .second-title{
+        padding-right: 25px;
+      }
+
+      .content-d{
+        @include absolute{
+          z-index: 1;
+        }
+
+        @include content-d{
+          text-align: center;
+          color: $white;
+          text-transform: uppercase;
+        }
+        .second-title{
+          display: inline-block;
+          font-size: 15px;
+          letter-spacing: 5px;
+          color: $white;
+        }
+      }
+
+      .overlay{
+        @include overlay;
+      }
+    }
+  }
+}

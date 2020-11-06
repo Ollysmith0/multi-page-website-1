@@ -1,0 +1,26 @@
+@import '../styles/variables.scss';
+
+$mobile-breakpoint: 481px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 992px;
+
+
+@mixin mobile { @media (max-width: #{$mobile-breakpoint - 1px}) {
+  @content;
+  } 
+}
+
+@mixin tablet { @media (min-width: #{$mobile-breakpoint + 1px}) and (max-width: #{$tablet-breakpoint}) {
+  @content;
+  } 
+}
+
+@mixin desktop { @media (min-width: #{$tablet-breakpoint + 1px}) {
+  @content;
+  } 
+}
+
+@mixin middle { @media (max-width: #{$tablet-breakpoint + 232px}) {
+  @content;
+  } 
+}
