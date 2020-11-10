@@ -26,6 +26,11 @@
   display: contents;
 }
 
+@mixin fixed {
+  position: fixed;
+  @content;
+}
+
 @mixin relative {
   position: relative;
   @content;

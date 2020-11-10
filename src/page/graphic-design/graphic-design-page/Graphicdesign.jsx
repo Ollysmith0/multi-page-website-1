@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
-import Header from "../components/Header/Header";
-import Content from "../components/Content/Content";
-import Footer from "../components/Footer/Footer";
+import Header from "../../home/components/Header/Header";
+import Content from "../../home/components/Content/Content";
+import Footer from "../../home/components/Footer/Footer";
 
-import "../components/Header/Header.scss";
-import "../components/Content/Content.scss";
-import "../components/Footer/Footer.scss";
+import "../../home/components/Header/Header.scss";
+import "../../home/components/Content/Content.scss";
+import "../../home/components/Footer/Footer.scss";
 
 const headerSource = [
   {
@@ -31,6 +30,7 @@ const contentSource = [
     titleD2: "Web design",
     navURL1: "/Appdesign",
     navURL2: "/Webdesign",
+    i: "0",
   },
   {
     imageURL: "/assets/images/graphic-design/desktop/image-boxed-water.jpg",
@@ -52,6 +52,9 @@ const Graphicdesign = () => {
   useEffect(() => {
     document.getElementById("banner-bg").style.left = "0";
     document.getElementById("card-layout").style.height = "333px";
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
   return (
     <div>

@@ -1,13 +1,12 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
 
-import Header from "../components/Header/Header";
-import Content from "../components/Content/Content";
-import Footer from "../components/Footer/Footer";
+import Header from "../../home/components/Header/Header";
+import Content from "../../home/components/Content/Content";
+import Footer from "../../home/components/Footer/Footer";
 
-import "../components/Header/Header.scss";
-import "../components/Content/Content.scss";
-import "../components/Footer/Footer.scss";
+import "../../home/components/Header/Header.scss";
+import "../../home/components/Content/Content.scss";
+import "../../home/components/Footer/Footer.scss";
 
 const headerSource = [
   {
@@ -71,6 +70,9 @@ const contentSource = [
 ];
 
 const Webdesign = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header headerSource={headerSource} />

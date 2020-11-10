@@ -22,10 +22,18 @@
         align-items: center;
 
         .logo{
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: all .5s ease-in-out;
 
           .oval{
             margin-right: 1rem;
           }
+        }
+
+        .is-visible{
+          transform: translateX(0);
+          opacity: 1;
         }
 
         .menu{
@@ -33,6 +41,10 @@
             justify-content: space-evenly;
             align-items: center;
           }
+
+          opacity: 0;
+          transform: translateX(1rem);
+          transition: all .5s ease-in-out;
 
           .item{
             margin-left: 2.625rem;
@@ -65,6 +77,11 @@
             }
           }
         }
+
+        .is-visible{
+          transform: translateX(0);
+          opacity: 1;
+        }
       }
     }
 
@@ -85,6 +102,10 @@
         justify-content: center;
       }
 
+      transform: translateY(-1rem);
+      opacity: 0;
+      transition: all 1s ease-in-out;
+
       .content-b{
         text-align: center;
         color: $white;
@@ -103,16 +124,16 @@
         }
       }
     }
+
+    .is-visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .rec-bg{
     width: 1006px;
     height: 594px;
-    @include absolute{
-      left: 0;
-      bottom: 0;
-      z-index: 1;
-    }
   }
 }
 

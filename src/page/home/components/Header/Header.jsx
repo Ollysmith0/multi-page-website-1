@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import scrollingDetect from "../../../../styles/js/scrollingDetect";
 
 const Header = (props) => {
+  useEffect(() => scrollingDetect(), []);
   return props.headerSource.map((item) => (
     <>
       <div className="header">
         <div className="container">
           <div className="content">
-            <div className="logo">
+            <div className="logo show-on-scroll">
               <img
                 src="/assets/images/home/desktop/Oval.svg"
                 alt="Oval-logo"
@@ -18,7 +20,7 @@ const Header = (props) => {
                 className="designo"
               ></img>
             </div>
-            <ul className="menu">
+            <ul className="menu show-on-scroll">
               <li className="item">
                 <a href="/#" className="link">
                   our company
@@ -36,7 +38,7 @@ const Header = (props) => {
               </li>
             </ul>
           </div>
-          <div className="banner">
+          <div className="banner show-on-scroll">
             <div className="content-b">
               <h1 className="title-b">{item.titleB}</h1>
               <para className="para-b">{item.paraB}</para>

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import scrollingDetect from "../../../../styles/js/scrollingDetect";
+import scrollTopButton from "../../../../styles/js/scrollTopButton";
 
 const Footer = () => {
+  useEffect(() => scrollingDetect(), []);
+  useEffect(() => scrollTopButton(), []);
   return (
     <div className="footer">
-      <div className="get-in-touch-banner">
+      <div className="get-in-touch-banner show-on-scroll">
         <div className="content-t">
           <h1 className="title-t">Let’s talk about your project</h1>
           <p className="para-t">
@@ -13,7 +18,7 @@ const Footer = () => {
         </div>
         <button className="get-touch-btn">get in touch</button>
       </div>
-      <div className="container-footer">
+      <div className="container-footer show-on-scroll">
         <div className="content-f">
           <div className="line1">
             <div className="left-logo">

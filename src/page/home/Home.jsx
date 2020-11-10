@@ -4,10 +4,15 @@ import { NavLink } from "react-router-dom";
 import "../home/Home.scss";
 
 import scrollingDetect from "../../styles/js/scrollingDetect";
+import scrollTopButton from "../../styles/js/scrollTopButton";
+import topFunction from "../../styles/js/scrollToTop";
 
 const Home = () => {
   useEffect(() => scrollingDetect(), []);
-
+  useEffect(() => scrollTopButton(), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <header>
@@ -27,14 +32,14 @@ const Home = () => {
             </div>
             <ul className="menu show-on-scroll">
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/About" className="link">
                   our company
-                </a>
+                </NavLink>
               </li>
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/Location" className="link">
                   locations
-                </a>
+                </NavLink>
               </li>
               <li className="item">
                 <a href="/#" className="link">
@@ -66,38 +71,10 @@ const Home = () => {
           </div>
         </div>
         <div className="container-design-categories">
-          <div className="web-design show-on-scroll">
-            <div className="content-d">
-              <h1 className="title-d">web design</h1>
-              <NavLink to="/Webdesign" className="second-title">
-                view projects
-              </NavLink>
-              <img
-                src="/assets/images/home/desktop/next-arrow.svg"
-                alt="next-arrow"
-                className="next-arrow"
-              />
-            </div>
-            <div className="overlay"></div>
-          </div>
-          <div className="right-content">
-            <div className="app-design show-on-scroll">
+          <NavLink to="/Webdesign" className="second-title">
+            <div className="web-design show-on-scroll">
               <div className="content-d">
-                <h1 className="title-d">app design</h1>
-                <NavLink to="/Appdesign" className="second-title">
-                  view projects
-                </NavLink>
-                <img
-                  src="/assets/images/home/desktop/next-arrow.svg"
-                  alt="next-arrow"
-                  className="next-arrow"
-                />
-              </div>
-              <div className="overlay"></div>
-            </div>
-            <div className="graphic-design show-on-scroll">
-              <div className="content-d">
-                <h1 className="title-d">graphic design</h1>
+                <h1 className="title-d">web design</h1>
                 <NavLink to="/Graphicdesign" className="second-title">
                   view projects
                 </NavLink>
@@ -109,6 +86,40 @@ const Home = () => {
               </div>
               <div className="overlay"></div>
             </div>
+          </NavLink>
+          <div className="right-content">
+            <NavLink to="/Appdesign" className="second-title">
+              <div className="app-design show-on-scroll">
+                <div className="content-d">
+                  <h1 className="title-d">app design</h1>
+                  <NavLink to="/Graphicdesign" className="second-title">
+                    view projects
+                  </NavLink>
+                  <img
+                    src="/assets/images/home/desktop/next-arrow.svg"
+                    alt="next-arrow"
+                    className="next-arrow"
+                  />
+                </div>
+                <div className="overlay"></div>
+              </div>
+            </NavLink>
+            <NavLink to="/Graphicdesign" className="second-title">
+              <div className="graphic-design show-on-scroll">
+                <div className="content-d">
+                  <h1 className="title-d">graphic design</h1>
+                  <NavLink to="/Graphicdesign" className="second-title">
+                    view projects
+                  </NavLink>
+                  <img
+                    src="/assets/images/home/desktop/next-arrow.svg"
+                    alt="next-arrow"
+                    className="next-arrow"
+                  />
+                </div>
+                <div className="overlay"></div>
+              </div>
+            </NavLink>
           </div>
         </div>
         <div className="container-concepts">
@@ -192,6 +203,22 @@ const Home = () => {
           </div>
         </div>
       </body>
+      <button className="scroll-top" id="scroll-top" onClick={topFunction}>
+        <svg
+          width="15"
+          height="20"
+          viewBox="0 0 5 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="Path 5"
+            d="M1 1L5 5L1 9"
+            stroke="#E7816B"
+            stroke-width="0"
+          />
+        </svg>
+      </button>
       <footer>
         <div className="container-footer show-on-scroll">
           <div className="content-f">

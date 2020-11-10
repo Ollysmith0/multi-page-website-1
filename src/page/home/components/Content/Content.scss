@@ -6,6 +6,7 @@
 .card-layout{
   @include container;
   height: 850px;
+  z-index: 2;
 
   @include d-grid{
     grid-template-columns: 1fr 1fr 1fr;
@@ -16,6 +17,8 @@
 
 }
 
+
+
 .container-app-design-categories{
   @include container;
   @include d-grid{
@@ -25,6 +28,9 @@
   margin-bottom: 377px;
 
   .left-design{
+    transform: translateX(-1rem);
+    opacity: 0;
+    transition: all 1s ease-in-out;
 
     .app-design{
       cursor: pointer;
@@ -72,7 +78,15 @@
     }
   }
 
+  .is-visible{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
   .right-design{
+    transform: translateX(1rem);
+    opacity: 0;
+    transition: all 1s ease-in-out;
 
     .graphic-design{
       background-image: url(../../../../styles/images/image-graphic-design.jpg);
@@ -117,5 +131,10 @@
         @include overlay;
       }
     }
+  }
+
+  .is-visible{
+    transform: translateX(0);
+    opacity: 1;
   }
 }

@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
-import Header from "../components/Header/Header";
-import Content from "../components/Content/Content";
-import Footer from "../components/Footer/Footer";
+import Header from "../../home/components/Header/Header";
+import Content from "../../home/components/Content/Content";
+import Footer from "../../home/components/Footer/Footer";
 
-import "../components/Header/Header.scss";
-import "../components/Content/Content.scss";
-import "../components/Footer/Footer.scss";
+import "../../home/components/Header/Header.scss";
+import "../../home/components/Content/Content.scss";
+import "../../home/components/Footer/Footer.scss";
 
 const headerSource = [
   {
@@ -31,6 +30,7 @@ const contentSource = [
     titleD2: "graphic design",
     navURL1: "/Webdesign",
     navURL2: "/Graphicdesign",
+    i: "0",
   },
   {
     imageURL: "/assets/images/app-design/desktop/image-eyecam.jpg",
@@ -65,6 +65,9 @@ const contentSource = [
 
 const Appdesign = () => {
   useEffect(() => (document.getElementById("banner-bg").style.left = "0"), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Header headerSource={headerSource} />
