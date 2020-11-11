@@ -1,0 +1,65 @@
+@import '../../../styles/reset.scss';
+@import '../../../styles/common.scss';
+@import '../../../styles/variables.scss';
+@import '../../../styles/responsive.scss';
+
+.subscribe-form{
+  width: 380px;
+  height: 371px;
+
+  label{
+    opacity: 0;
+    font-size: 15px;
+    line-height: 26px;
+    font-weight: 500;
+    color: $white;
+  }
+
+  input {
+    display: block;
+    width: 380px;
+    outline: 0;
+    border-bottom: 1px ridge $white;
+    background-color: $peach;
+
+    @include relative;
+    margin-bottom: 23px;
+  }
+
+
+  input:focus {
+    border-bottom: 1px ridge $white;
+    color: $white;
+  }
+
+  input:focus ~ input:focus::placeholder{
+    opacity: 0;
+  }
+
+  ::placeholder{
+    color: $white;
+    opacity: .5;
+    transition: all .3s ease-in-out;
+  }
+
+  .submit-btn{
+    cursor: pointer;
+    outline: none;
+    transition: all .3s ease-in-out;
+    float: right;
+    margin-top: 24px;
+
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 17px 47px;
+    background-color: $white;
+    border-radius: 5px;
+
+    &:hover{
+      background-color: $peach-active;
+      color: $white;
+    }
+  }
+}
+

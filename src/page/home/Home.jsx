@@ -42,9 +42,9 @@ const Home = () => {
                 </NavLink>
               </li>
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/Contact" className="link">
                   contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

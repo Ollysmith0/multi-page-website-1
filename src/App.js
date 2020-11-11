@@ -8,6 +8,7 @@ import Home from "../src/page/home/Home";
 import Loading from "./page/home/components/Loading/Loading";
 import About from "../src/page/about/About";
 import Location from "../src/page/locations/Location";
+import Contact from "../src/page/contact/Contact";
 
 function App() {
   const [loaded, setLoaded] = useState(true);
@@ -25,6 +26,7 @@ function App() {
         <Route path="/Graphicdesign" component={Graphicdesign} />
         <Route path="/About" component={About} />
         <Route path="/Location" component={Location} />
+        <Route path="/Contact" component={Contact} />
         {/* <Route component={NotFound} /> */}
       </div>
     </Router>
