@@ -52,6 +52,11 @@ const Home = () => {
       </header>
       <body>
         <div className="container-banner show-on-scroll">
+          <img
+            src="/assets/images/home/tablet/oval-tablet-bg.svg"
+            alt="bg-pattern-hero-home"
+            className="tablet-bg-pattern"
+          />
           <div className="banner-content">
             <h1 className="title">
               Award-winning custom designs and digital branding solutions
@@ -126,63 +131,77 @@ const Home = () => {
           <div className="concepts">
             <div className="passionate show-on-scroll">
               <div className="content-c">
-                <img
-                  src="/assets/images/home/desktop/illustration-passionate.svg"
-                  alt="passionate"
-                  className="passionate-img"
-                />
-                <img
-                  src="/assets/images/home/desktop/oval-white.svg"
-                  alt="oval-white"
-                  className="oval-white"
-                />
-                <h1 className="title-c">PASSIONATE</h1>
-                <p className="para-c">
-                  Each project starts with an in-depth brand research to ensure
-                  we only create products that serve a purpose. We merge art,
-                  design, and technology into exciting new solutions.
-                </p>
+                <div className="icon-c">
+                  <img
+                    src="/assets/images/home/desktop/illustration-passionate.svg"
+                    alt="passionate"
+                    className="passionate-img"
+                  />
+                  <img
+                    src="/assets/images/home/desktop/oval-white.svg"
+                    alt="oval-white"
+                    className="oval-white"
+                  />
+                </div>
+                <div className="right-c">
+                  <h1 className="title-c">PASSIONATE</h1>
+                  <p className="para-c">
+                    Each project starts with an in-depth brand research to
+                    ensure we only create products that serve a purpose. We
+                    merge art, design, and technology into exciting new
+                    solutions.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="resourceful show-on-scroll">
               <div className="content-c">
-                <img
-                  src="/assets/images/home/desktop/illustration-resourceful.svg"
-                  alt="resourceful"
-                  className="resourceful-img"
-                />
-                <img
-                  src="/assets/images/home/desktop/oval-white-2.svg"
-                  alt="oval-white"
-                  className="oval-white"
-                />
-                <h1 className="title-c">RESOURCEFUL</h1>
-                <p className="para-c">
-                  Everything that we do has a strategic purpose. We use an agile
-                  approach in all of our projects and value customer
-                  collaboration. It guarantees superior results that fulfill our
-                  clients’ needs.
-                </p>
+                <div className="icon-c">
+                  <img
+                    src="/assets/images/home/desktop/illustration-resourceful.svg"
+                    alt="resourceful"
+                    className="resourceful-img"
+                  />
+                  <img
+                    src="/assets/images/home/desktop/oval-white-2.svg"
+                    alt="oval-white"
+                    className="oval-white"
+                  />
+                </div>
+                <div className="right-c">
+                  <h1 className="title-c">RESOURCEFUL</h1>
+                  <p className="para-c">
+                    Everything that we do has a strategic purpose. We use an
+                    agile approach in all of our projects and value customer
+                    collaboration. It guarantees superior results that fulfill
+                    our clients’ needs.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="friendly show-on-scroll">
               <div className="content-c">
-                <img
-                  src="/assets/images/home/desktop/illustration-friendly.svg"
-                  alt="friendly"
-                  className="friendly-img"
-                />
-                <img
-                  src="/assets/images/home/desktop/oval-white-3.svg"
-                  alt="oval-white"
-                  className="oval-white"
-                />
-                <h1 className="title-c">FRIENDLY</h1>
-                <p className="para-c">
-                  We are a group of enthusiastic folks who know how to put
-                  people first. Our success depends on our customers, and we
-                  strive to give them the best experience a company can provide.
-                </p>
+                <div className="icon-c">
+                  <img
+                    src="/assets/images/home/desktop/illustration-friendly.svg"
+                    alt="friendly"
+                    className="friendly-img"
+                  />
+                  <img
+                    src="/assets/images/home/desktop/oval-white-3.svg"
+                    alt="oval-white"
+                    className="oval-white"
+                  />
+                </div>
+                <div className="right-c">
+                  <h1 className="title-c">FRIENDLY</h1>
+                  <p className="para-c">
+                    We are a group of enthusiastic folks who know how to put
+                    people first. Our success depends on our customers, and we
+                    strive to give them the best experience a company can
+                    provide.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -238,19 +257,19 @@ const Home = () => {
               <div className="right-nav">
                 <ul className="menu">
                   <li className="item">
-                    <a href="/#" className="link">
+                    <NavLink to="/About" className="link">
                       our company
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="item">
-                    <a href="/#" className="link">
+                    <NavLink to="/Location" className="link">
                       locations
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="item">
-                    <a href="/#" className="link">
+                    <NavLink to="/Contact" className="link">
                       contact
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </div>

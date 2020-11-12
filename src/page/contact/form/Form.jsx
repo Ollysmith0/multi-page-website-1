@@ -1,7 +1,9 @@
 import React from "react";
+import inputAnimate from "../form/Form";
+import "../form/Form.scss";
+
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
-import "../form/Form.scss";
 
 const MyTextInput = ({ label, ...props }) => {
   // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
@@ -13,7 +15,14 @@ const MyTextInput = ({ label, ...props }) => {
       <label htmlFor={props.id || props.name}>{label}</label>
       <input className="text-input" {...field} {...props} />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <>
+          <div className="error">{meta.error}</div>
+          <img
+            src="/assets/images/contact/desktop/exclamation-mark.svg"
+            alt="exclamation-mark"
+            className="exclamation-mark"
+          />
+        </>
       ) : null}
     </>
   );
@@ -33,14 +42,14 @@ const SubscribeForm = () => {
         validationSchema={Yup.object({
           name: Yup.string()
             .max(15, "Must be 15 characters or less")
-            .required("Required"),
+            .required("Can't be empty"),
           email: Yup.string()
             .email("Invalid email address")
-            .required("Required"),
+            .required("Can't be empty"),
           phone: Yup.string()
             .matches(phoneRegExp, "Phone number is not valid")
-            .required("Required"),
-          message: Yup.string().max(200, "Must be 15 characters or less"),
+            .required("Can't be empty"),
+          message: Yup.string().max(50, "Must be 50 characters or less"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -50,34 +59,38 @@ const SubscribeForm = () => {
         }}
       >
         <Form className="subscribe-form">
-          <MyTextInput
-            label="Name"
-            name="name"
-            type="text"
-            className="name-input"
-            placeholder="Name"
-          />
-          <MyTextInput
-            label="Email Address"
-            name="email"
-            type="email"
-            className="email-input"
-            placeholder="Email Address"
-          />
-          <MyTextInput
-            label="Phone"
-            name="phone"
-            type="phone"
-            className="phone-input"
-            placeholder="Phone"
-          />
-          <MyTextInput
-            label="Message"
-            name="message"
-            type="message"
-            className="message-input"
-            placeholder="Message"
-          />
+          <div onClick={inputAnimate}>
+            <MyTextInput
+              name="name"
+              label="Name"
+              type="text"
+              className="name-input"
+            />
+          </div>
+          <div onClick={inputAnimate}>
+            <MyTextInput
+              label="Email"
+              name="email"
+              type="email"
+              className="email-input"
+            />
+          </div>
+          <div onClick={inputAnimate}>
+            <MyTextInput
+              label="Phone"
+              name="phone"
+              type="phone"
+              className="phone-input"
+            />
+          </div>
+          <div onClick={inputAnimate}>
+            <MyTextInput
+              label="Message"
+              name="message"
+              type="message"
+              className="message-input"
+            />
+          </div>
 
           <button className="submit-btn" type="submit">
             Submit

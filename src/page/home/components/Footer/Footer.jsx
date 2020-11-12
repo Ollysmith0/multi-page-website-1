@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 import scrollingDetect from "../../../../styles/js/scrollingDetect";
 import scrollTopButton from "../../../../styles/js/scrollTopButton";
@@ -36,19 +37,19 @@ const Footer = () => {
             <div className="right-nav">
               <ul className="menu">
                 <li className="item">
-                  <a href="/#" className="link">
+                  <NavLink to="/About" className="link">
                     our company
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="item">
-                  <a href="/#" className="link">
+                  <NavLink to="/Location" className="link">
                     locations
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="item">
-                  <a href="/#" className="link">
+                  <NavLink to="/Contact" className="link">
                     contact
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 import "../about/About.scss";
 
 import Footer from "../home/components/Footer/Footer";
@@ -10,6 +12,9 @@ import topFunction from "../../styles/js/scrollToTop";
 const About = () => {
   useEffect(() => scrollingDetect(), []);
   useEffect(() => scrollTopButton(), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <header>
@@ -29,19 +34,19 @@ const About = () => {
             </div>
             <ul className="menu show-on-scroll">
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/About" className="link">
                   our company
-                </a>
+                </NavLink>
               </li>
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/Location" className="link">
                   locations
-                </a>
+                </NavLink>
               </li>
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/Contact" className="link">
                   contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

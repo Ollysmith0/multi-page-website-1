@@ -1,6 +1,6 @@
 @import '../../styles/reset.scss';
-@import '../../styles/common.scss';
 @import '../../styles/variables.scss';
+@import '../../styles/common.scss';
 @import '../../styles/responsive.scss';
 
 header{
@@ -81,6 +81,15 @@ header{
 }
 
 body{
+  @include relative;
+
+  .rec-web-design-bg2{
+    @include absolute{
+      right: 0;
+      bottom: -311px;
+    }
+  }
+
   .container-contact{
     @include container;
 
@@ -98,6 +107,15 @@ body{
           left: 0;
           bottom: 0;
         }
+
+        transform: translateY(-1rem);
+        opacity: 0;
+        transition: all .5s ease-in-out;
+      }
+
+      .is-visible{
+        transform: translateY(0);
+        opacity: 1;
       }
 
       .left-content{
@@ -115,6 +133,9 @@ body{
             color: white;
             width: 540px;
             height: 184px;
+            transform: translateX(-1rem);
+            opacity: 0;
+            transition: all .5s ease-in-out;
 
             .title-contact{
               font-size: 48px;
@@ -128,6 +149,11 @@ body{
               width: 445px;
             }
           }
+
+          .is-visible{
+            opacity: 1;
+            transform: translateX(0);
+          }
         }
       }
 
@@ -136,6 +162,15 @@ body{
           align-items: center;
           justify-content: center;
         }
+
+        transform: translateX(1rem);
+        opacity: 0;
+        transition: all .5s ease-in-out;
+      }
+
+      .is-visible{
+        transform: translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -265,4 +300,153 @@ body{
       transform: translateY(0);
     }
   }
+}
+
+footer{
+  width: 100%;
+  height: 393px;
+  background-color: $black;
+
+  .container-footer{
+    margin: 144px 164px 72px 165px;
+    height: 100%;
+    @include container;
+
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: all 1s ease-in-out;
+
+    .content-f{
+      max-width: 1111px;
+      width: 100%;
+      height: 177px;
+      padding: 140px 0 72px 0;
+
+      .line1{
+        @include d-flex{
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        padding-bottom: 41px;
+        border-bottom: 1px solid $white-active;
+
+        .left-logo{
+
+          .oval{
+            padding-right: 16px;
+          }
+
+          .DESIGNO-logo{
+
+          }
+        }
+
+        .right-nav{
+
+          .menu{
+            @include d-flex;
+
+            .item{
+              margin-left: 42px;
+
+              a{
+                font-size: 14px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: $white;
+                @include relative;
+
+                &::after{
+                  content: "";
+
+                  @include absolute{
+                    bottom: 2px;
+                    left: 50%;
+                    right: 50%;
+                  }
+
+                  width: 0;
+                  height: 0.1px;
+                  background-color: $white;
+                  opacity: 1;
+                  transition: all .3s ease-in-out;
+                }
+
+                &:hover::after{
+                  width: 100%;
+                  left: 0;
+                  right: 0;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .line2{
+        @include d-flex;
+
+        padding-top: 32px;
+        color: $white;
+        font-size: 16px;
+        font-weight: 400;
+
+        .address{
+          max-width: 200px;
+          width: 100%;
+
+          .title-g{
+            font-weight: 600;
+          }
+        }
+
+        .contact{
+          margin-left: 125px;
+          width: 40%;
+          
+          .title-g{
+            font-weight: 600;
+          }
+        }
+
+        .social-nav{
+          @include d-flex{
+            align-items: flex-end;
+            justify-content: flex-end ;
+          }
+
+          width: 31%;
+
+          li{
+            padding-left: 16px;
+
+            a {
+              
+              svg{
+
+                path{
+                  transition: all .3s ease-in-out;
+                }
+              }
+            }
+
+            &:hover svg path{
+              fill: $peach-active;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .is-visible{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-contact{
+  @include relative;
 }

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
+
 import scrollingDetect from "../../../../styles/js/scrollingDetect";
 
 const Header = (props) => {
@@ -22,19 +24,19 @@ const Header = (props) => {
             </div>
             <ul className="menu show-on-scroll">
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/About" className="link">
                   our company
-                </a>
+                </NavLink>
               </li>
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/Location" className="link">
                   locations
-                </a>
+                </NavLink>
               </li>
               <li className="item">
-                <a href="/#" className="link">
+                <NavLink to="/Contact" className="link">
                   contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

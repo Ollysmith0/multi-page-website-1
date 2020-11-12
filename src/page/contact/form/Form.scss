@@ -7,38 +7,75 @@
   width: 380px;
   height: 371px;
 
-  label{
-    opacity: 0;
-    font-size: 15px;
-    line-height: 26px;
-    font-weight: 500;
-    color: $white;
-  }
-
-  input {
-    display: block;
-    width: 380px;
-    outline: 0;
-    border-bottom: 1px ridge $white;
-    background-color: $peach;
-
+  div{
     @include relative;
-    margin-bottom: 23px;
+
+    label{
+      font-size: 15px;
+      line-height: 26px;
+      font-weight: 500;
+      color: $white;
+      opacity: .5;
+
+      @include absolute{
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      transform: scale(1);
+      transition: all .3s ease-in-out;
+    }
+
+    .label-animate{
+      top: -25px;
+      left: 5px;
+      z-index: 1;
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    input {
+      display: block;
+      width: 380px;
+      outline: 0;
+      border-bottom: 1px ridge $white;
+      background-color: $peach;
+      color: $white;
+
+      @include relative;
+      margin-bottom: 3rem;
+    }
+
+
+    input:focus {
+      border-bottom: 1px ridge $white;
+      color: $white;
+    }
+
+    ::placeholder{
+      color: $white;
+      opacity: .5;
+      transition: all .3s ease-in-out;
+    }
   }
 
-
-  input:focus {
-    border-bottom: 1px ridge $white;
+  .error{
+    @include absolute{
+      top: 30px;
+      right: 25px;
+    }
     color: $white;
+    opacity: 1;
+    font-style: italic;
+    transition: all .3s ease-in-out;
   }
 
-  input:focus ~ input:focus::placeholder{
-    opacity: 0;
-  }
-
-  ::placeholder{
-    color: $white;
-    opacity: .5;
+  .exclamation-mark{
+    @include absolute{
+      top: 33px;
+      right: 0;
+    }
+    opacity: 1;
     transition: all .3s ease-in-out;
   }
 

@@ -11,11 +11,11 @@ import Location from "../src/page/locations/Location";
 import Contact from "../src/page/contact/Contact";
 
 function App() {
-  const [loaded, setLoaded] = useState(true);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoaded(false), 2000);
+    setTimeout(() => setLoading(false), 2000);
   }, []);
-  return loaded ? (
+  return loading ? (
     <Loading />
   ) : (
     <Router>

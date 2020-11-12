@@ -1,3 +1,4 @@
+@import '../styles/responsive.scss';
 @import '../styles/variables.scss';
 
 @mixin d-flex {
@@ -46,6 +47,13 @@
   width: 100%;
   margin: 0 auto;
   @content; 
+
+  @include tablet{
+    max-width: 689px;
+    width: 100%;
+    margin: 0 auto;
+    @content;
+  }
 }
 
 @mixin content-d {
@@ -82,6 +90,81 @@
 
 @mixin content-c {
   @include relative;
+  @content;
+  
+
+  @include tablet{
+    @include d-flex;
+  }
+
+  .icon-c{
+    width: 100%;
+    height: 202px;
+    margin-right: 48px;
+    @include relative;
+    @include d-flex{
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include tablet{
+      width: 202px;
+      height: 202px;
+    }
+
+    .passionate-img{
+      
+      @include tablet{
+       width: 160px;
+       height: 136px;
+      }
+    }
+
+    .friendly-img{
+
+      @include tablet{
+        width: 160px;
+        height: 136px;
+      }
+    }
+
+    .resourceful-img{
+
+      @include tablet{
+        width: 160px;
+        height: 136px;
+      }
+    }
+
+    .oval-white{
+
+    }
+  }
+
+  .right-c{
+
+    @include tablet{
+      @include d-flex{
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .title-c{
+
+      @include tablet{
+        margin-bottom: 16px;
+      }
+    }
+
+    .para-c{
+      
+      @include tablet{
+        text-align: initial;
+      }
+    }
+  }
 
   img{
     max-width: 184px;
