@@ -81,6 +81,7 @@ header{
 }
 
 body{
+
   .container-about{
     @include relative;
     z-index: 2;
@@ -88,9 +89,24 @@ body{
     margin-top: 64px;
     margin-bottom: 500px;
 
+    @include tablet{
+      margin-bottom: 24rem;
+    }
+
     .about-content{
       @include d-flex;
       height: 480px;
+
+      @include tablet{
+        @include d-flex{
+          flex-direction: column-reverse;
+        } 
+      }
+
+      @include tablet{
+        width: 689px;
+        height: 632px;
+      }
 
       .flex-box-a{
         background-color: $peach;
@@ -106,14 +122,32 @@ body{
           align-items: center;
         }
 
+        @include tablet{
+          height: 312px;
+          width: 689px;
+          border-top-left-radius: initial;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: all .5s ease-in-out;
+        }
+
         opacity: 0;
         transform: translateY(-1rem);
         transition: all .5s ease-in-out;
 
         .content-a{
+          text-align: center;
           max-width: 540px;
           @include absolute{
             z-index: 2;
+          }
+
+          @include tablet{
+            width: 575px;
+            max-width: 689px;
           }
 
           .title-a{
@@ -126,6 +160,10 @@ body{
             max-width: 458px;
             font-size: 16px;
             line-height: 26px;
+
+            @include tablet{
+              display: contents;
+            }
           }
         }
 
@@ -133,6 +171,11 @@ body{
           @include absolute{
             top: 0;
             left: 0;
+
+            @include tablet{
+              top: -230px;
+              left: -150px;
+            }
           }
         }
       }
@@ -143,17 +186,50 @@ body{
         transform: translateY(1rem);
         transition: all .5s ease-in-out;
 
+        @include tablet{
+          width: 689px;
+          height: 320px;
+          opacity: 0;
+          transform: translateX(1rem);
+          transition: all .5s ease-in-out;
+        }
+
         .img-a{
           width: 100%;
           height: 480px;
-          border-top-right-radius: 10px;
-          border-bottom-right-radius: 10px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          @include tablet{
+            display: none;
+          }
+        }
+
+        .img-a-tablet{
+          @include d-none;
+
+          @include tablet{
+            @include d-block;
+
+            width: 689px;
+            height: 320px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            object-fit: cover;
+            background-size: contain;
+
+          }
         }
       }
 
       .is-visible{
         transform: translateY(0);
         opacity: 1;
+
+        @include tablet{
+          transform: translateX(0);
+          opacity: 1;
+        }
       }
     }
 
@@ -162,8 +238,25 @@ body{
       margin-top: 160px;
       height: 640px;
 
+      @include tablet{
+        width: 689px;
+        height: 736px;
+        @include d-flex{
+          flex-direction: column;
+        }
+      }
+
       .image-q{
         width: 476px;
+
+        @include tablet{
+          width: 689px;
+          height: 320px;
+
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: all .5s ease-in-out;
+        }
         opacity: 0;
         transform: translateY(-1rem);
         transition: all .5s ease-in-out;
@@ -171,6 +264,23 @@ body{
         .img-q{
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
+
+          @include tablet{
+            display: none;
+          }
+        }
+
+        .img-tablet-q{
+          @include d-none;
+
+          @include tablet{
+            @include d-block;
+            width: 689px;
+            height: 320px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            object-fit: cover;
+          }
         }
       }
 
@@ -190,14 +300,35 @@ body{
           align-items: center;
         }
 
+        @include tablet{
+          width: 689px;
+          height: 416px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+
+          opacity: 0;
+          transform: translateX(1rem);
+          transition: all .5s ease-in-out;
+        }
+
         opacity: 0;
         transform: translateY(1rem);
         transition: all .5s ease-in-out;
 
         .content-q{
           width: 445px;
+
           @include relative{
             z-index: 1;
+          }
+
+          @include tablet{
+            text-align: center;
+          }
+
+          @include tablet{
+            width: 572px;
+            height: 280px;
           }
           
           .title-q{
@@ -208,7 +339,9 @@ body{
           }
 
           .para-q{
-
+            @include tablet{
+              
+            }
           }
         }
       }
@@ -236,7 +369,19 @@ body{
         justify-content: space-evenly;
       }
 
+      @include tablet{
+        flex-direction: column;
+      }
+
       .canada{
+
+        @include tablet{
+          margin-bottom: 5rem;
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: all .5s ease-in-out;
+        }
+
         opacity: 0;
         transform: translateY(-1rem);
         transition: all .5s ease-in-out;
@@ -278,6 +423,13 @@ body{
         transform: translateY(1rem);
         transition: all .5s ease-in-out;
 
+        @include tablet{
+          margin-bottom: 5rem;
+          opacity: 0;
+          transform: translateX(1rem);
+          transition: all .5s ease-in-out;
+        }
+
         .australia-title{
           font-size: 20px;
           line-height: 26px;
@@ -314,6 +466,13 @@ body{
         opacity: 0;
         transform: translateY(-1rem);
         transition: all .5s ease-in-out;
+
+        @include tablet{
+          margin-bottom: 5rem;
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: all .5s ease-in-out;
+        }
 
         .united-kingdom-title{
           font-size: 20px;
@@ -356,23 +515,42 @@ body{
     .real-deal{
       @include d-flex;
 
+      @include tablet{
+        flex-direction: column-reverse;
+      }
+
       .flex-box-r{
         @include d-flex{
           justify-content: center;
           align-items: center;
         }
-        width: 634px;
+
+        width: 689px;
         background: $card-bg;
-        border-bottom-left-radius: 10px;
-        border-top-left-radius: 10px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
 
         opacity: 0;
         transform: translateY(-1rem);
         transition: all .5s ease-in-out;
 
+        @include tablet{
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          opacity: 0;
+          transform: translateX(-1rem);
+          transition: all .5s ease-in-out;
+        }
+
         .content-r{
           width: 445px;
           height: 332px;
+
+          @include tablet{
+            text-align: center;
+            height: 416px;
+            padding-top: 3rem;
+          }
 
           .title-r{
             font-size: 40px;
@@ -398,9 +576,33 @@ body{
         transform: translateY(1rem);
         transition: all .5s ease-in-out;
 
+        @include tablet{
+          opacity: 0;
+          transform: translateX(1rem);
+          transition: all .5s ease-in-out;
+        }
+
         .img-r{
           border-bottom-right-radius: 10px;
           border-top-right-radius: 10px;
+
+          @include tablet{
+            @include d-none;
+          }
+        }
+
+        .img-r-tablet{
+          @include d-none;
+
+          @include tablet{
+            @include d-block;
+
+            width: 689px;
+            height: 320px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            object-fit: cover;
+          }
         }
       }
 

@@ -8,9 +8,8 @@ const Card = (props) => {
   useEffect(() => scrollingDetect(), []);
   useEffect(() => scrollTopButton(), []);
   const { imageURL, imageAlt, imageClass, title, para } = props.item;
-  console.log(typeof i);
   return (
-    <div>
+    <>
       <div className="card show-on-scroll">
         <div className="card-bg">
           <img src={imageURL} alt={imageAlt} className={imageClass}></img>
@@ -22,7 +21,7 @@ const Card = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

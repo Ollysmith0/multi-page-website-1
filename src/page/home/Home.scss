@@ -446,6 +446,10 @@ body{
         z-index: 1;
       }
 
+      @include tablet{
+        @include d-block;
+      }
+
       .passionate{
         text-align: center;
         padding-right: 30px;
@@ -458,6 +462,12 @@ body{
           @include content-c;
           @include d-flex{
             flex-direction: column;
+          }
+
+          @include tablet{
+            @include d-flex{
+              flex-direction: row;
+            }
           }
         }
       }

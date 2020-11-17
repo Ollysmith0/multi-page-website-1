@@ -86,8 +86,17 @@ body{
     @include container;
     margin-bottom: 384px;
 
+    @include tablet{
+      margin-bottom: 22rem;
+    }
+
     .canada{
       @include d-flex;
+
+      @include tablet{
+        flex-direction: column-reverse;
+        margin-bottom: 120px;
+      }
 
       .flex-box-ca{
         background: $card-bg;
@@ -99,6 +108,14 @@ body{
         opacity: 0;
         transform: translateX(-1rem);
         transition: all .3s ease-in-out;
+
+        @include tablet{
+          width: 689px;
+          height: 326px;
+          border-radius: 15px;
+          margin-right: 0;
+          margin-top: 31px;
+        }
 
         @include d-flex{
           align-items: center;
@@ -162,6 +179,22 @@ body{
           width: 350px;
           height: 326px;
           border-radius: 10px;
+
+          @include tablet{
+            @include d-none;
+          }
+        }
+
+        .canada-img-tablet{
+          @include d-none;
+
+          @include tablet{
+            @include d-block;
+            margin-bottom: 31px;
+            width: 689px;
+            height: 326px;
+            border-radius: 15px;
+          }
         }
       }
 
@@ -174,6 +207,11 @@ body{
     .australia{
       @include d-flex;
       margin-top: 32px;
+
+      @include tablet{
+        flex-direction: column;
+        margin-bottom: 120px;
+      }
 
       .flex-box-us{
         background: $card-bg;
@@ -192,6 +230,14 @@ body{
         }
 
         @include relative;
+
+        @include tablet{
+          width: 689px;
+          height: 326px;
+          border-radius: 15px;
+          margin-left: 0;
+          margin-top: 31px;
+        }
 
         .content-location-bg{
           @include absolute{
@@ -248,6 +294,25 @@ body{
           width: 350px;
           height: 326px;
           border-radius: 10px;
+
+          @include tablet{
+            @include d-none;
+
+            width: 689px;
+            height: 326px;
+            border-radius: 15px;
+            margin-left: 0;
+          }
+        }
+
+        .australia-img-tablet{
+          @include d-none;
+
+          @include tablet{
+            @include d-block;
+
+
+          }
         }
       }
 
@@ -257,9 +322,14 @@ body{
       }
     }
 
-    .united-kingdom{
+    .united-kingdom{  
       @include d-flex;
       margin-top: 32px;
+
+      @include tablet{
+        flex-direction: column-reverse;
+        margin-bottom: 120px;
+      }
 
       .flex-box-un{
         background: $card-bg;
@@ -278,6 +348,14 @@ body{
         }
 
         @include relative;
+
+        @include tablet{
+
+          width: 689px;
+          height: 326px;
+          border-radius: 15px;
+          margin-top: 31px;
+        }
 
         .content-location-bg{
           @include absolute{
@@ -333,6 +411,22 @@ body{
           width: 350px;
           height: 326px;
           border-radius: 10px;
+
+          @include tablet{
+            @include d-none;
+          }
+        }
+
+        .united-kingdom-img-tablet{
+          @include d-none;
+
+          @include tablet{
+            @include d-block;
+
+            width: 689px;
+            height: 326px;
+            border-radius: 15px;
+          }
         }
       }
 

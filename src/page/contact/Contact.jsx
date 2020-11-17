@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 
 import "../contact/Contact.scss";
 
-import SubscribeForm from "../contact/form/Form";
-
 import scrollingDetect from "../../styles/js/scrollingDetect";
 import scrollTopButton from "../../styles/js/scrollTopButton";
 import topFunction from "../../styles/js/scrollToTop";
+
+import SubscribeForm from "../contact/form/Form";
 
 const Contact = () => {
   useEffect(() => scrollingDetect(), []);
@@ -15,8 +15,9 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  console.log(typeof SubscribeForm);
   return (
-    <div>
+    <>
       <header>
         <div className="container">
           <div className="content">
@@ -275,7 +276,7 @@ const Contact = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 

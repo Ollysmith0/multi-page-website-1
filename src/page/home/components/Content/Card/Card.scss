@@ -8,9 +8,15 @@
   height: 478px;
   @include container;
 
-  @include relative{
-    bottom: 303px;
-    z-index: 2;
+  @include tablet{
+    width: 689px;
+    height: 310px;
+
+    @include d-flex
+  }
+
+  @include tablet{
+    position: initial;
   }
 
   transform: translateY(1rem);
@@ -21,11 +27,24 @@
     width: 350px;
     height: 320px;
 
+    @include tablet{
+      width: 344.5px;
+    }
+
     img {
       max-width: 350px;
       height: 320px;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+
+      @include tablet{
+        height: 310px;
+        width: 344.5px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: initial;
+        border-bottom-right-radius: initial;
+      }
     }
   }
 
@@ -41,6 +60,15 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     transition: all .3s ease-in-out;
+
+    @include tablet{
+      height: 310px;
+      width: 344.5px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-left-radius: initial;
+      border-bottom-left-radius: initial;
+    }
 
     @include d-flex{
       align-items: center;

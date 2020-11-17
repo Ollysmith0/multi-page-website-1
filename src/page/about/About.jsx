@@ -79,6 +79,11 @@ const About = () => {
                 alt="img-about-hero"
                 className="img-a"
               />
+              <img
+                src="/assets/images/about/tablet/image-about-hero.jpg"
+                alt="img-about-hero-tablet"
+                className="img-a-tablet"
+              />
             </div>
           </div>
           <div className="qualify-talent">
@@ -87,6 +92,11 @@ const About = () => {
                 src="/assets/images/about/desktop/image-world-class-talent.jpg"
                 alt="img-world-class"
                 className="img-q"
+              />
+              <img
+                src="/assets/images/about/tablet/image-world-class-talent.jpg"
+                alt="img-world-class"
+                className="img-tablet-q"
               />
             </div>
             <div className="flex-box-q show-on-scroll">
@@ -97,6 +107,9 @@ const About = () => {
                   technologists. Every design is thoughtfully crafted from
                   concept to launch, ensuring success in its given market. We
                   are constantly updating our skills in a myriad of platforms.
+                </p>
+                <br />
+                <p className="para-q">
                   Our team is multi-disciplinary and we are not merely
                   interested in form — content and meaning are just as
                   important. We give great importance to craftsmanship, service,
@@ -171,6 +184,11 @@ const About = () => {
                 src="/assets/images/about/desktop/image-real-deal.jpg"
                 alt="real-deal-img"
                 className="img-r"
+              />
+              <img
+                src="/assets/images/about/tablet/image-real-deal.jpg"
+                alt="real-deal-img"
+                className="img-r-tablet"
               />
             </div>
           </div>

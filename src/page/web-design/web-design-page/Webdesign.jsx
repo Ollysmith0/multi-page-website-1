@@ -8,6 +8,8 @@ import "../../home/components/Header/Header.scss";
 import "../../home/components/Content/Content.scss";
 import "../../home/components/Footer/Footer.scss";
 
+import "../web-design-page/Webdesign.scss";
+
 const headerSource = [
   {
     titleB: "Web design",

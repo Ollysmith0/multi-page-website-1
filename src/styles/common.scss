@@ -94,7 +94,9 @@
   
 
   @include tablet{
-    @include d-flex;
+    @include d-flex{
+      align-items: center;
+    }
   }
 
   .icon-c{
@@ -137,7 +139,9 @@
     }
 
     .oval-white{
-
+      @include tablet{
+        left: 0;
+      }
     }
   }
 

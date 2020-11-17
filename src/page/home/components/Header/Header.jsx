@@ -41,6 +41,12 @@ const Header = (props) => {
             </ul>
           </div>
           <div className="banner show-on-scroll">
+            <img
+              src="/assets/images/web-design/desktop/banner-bg-tablet.svg"
+              alt="banner-bg"
+              className="banner-tablet-bg"
+              id="banner-bg"
+            />
             <div className="content-b">
               <h1 className="title-b">{item.titleB}</h1>
               <para className="para-b">{item.paraB}</para>

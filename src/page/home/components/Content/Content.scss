@@ -5,7 +5,7 @@
 
 .card-layout{
   @include container;
-  height: 850px;
+  min-height: 480px;
   z-index: 2;
 
   @include d-grid{
@@ -13,6 +13,17 @@
     grid-template-rows: 1fr 1fr;
     row-gap: 32px;
     column-gap: 30px;
+  }
+
+  @include tablet{
+    height: 100% !important;
+    max-height: 2000px;
+    margin-bottom: 120px;
+
+    @include d-grid{
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
   }
 
 }
@@ -26,6 +37,14 @@
     column-gap: 30px;
   }
   margin-bottom: 377px;
+  margin-top: 7rem;
+
+  @include tablet{
+    margin-bottom: 20rem;
+    @include d-grid{
+      grid-template-columns: 1fr;
+    }
+  }
 
   .left-design{
     transform: translateX(-1rem);
@@ -44,6 +63,14 @@
       @include d-flex{
         align-items: center;
         justify-content: center;
+      }
+
+      @include tablet{
+        width: 689px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 24px;
       }
 
       &:hover > .overlay{
@@ -99,6 +126,14 @@
       @include d-flex{
         align-items: center;
         justify-content: center;
+      }
+
+      @include tablet{
+        width: 689px;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 24px;
       }
 
       &:hover > .overlay{

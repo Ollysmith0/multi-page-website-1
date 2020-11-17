@@ -83,6 +83,11 @@ const Location = () => {
                 alt="img-canada"
                 className="canada-img"
               />
+              <img
+                src="/assets/images/locations/tablet/image-map-canada.png"
+                alt="img-canada"
+                className="canada-img canada-img-tablet"
+              />
             </div>
           </div>
           <div className="australia">
@@ -91,6 +96,11 @@ const Location = () => {
                 src="/assets/images/locations/desktop/image-map-australia.png"
                 alt="img-australia"
                 className="australia-img"
+              />
+              <img
+                src="/assets/images/locations/tablet/image-map-australia.png"
+                alt="img-australia"
+                className="australia-img australia-img-tablet"
               />
             </div>
             <div className="flex-box-us show-on-scroll">
@@ -144,6 +154,11 @@ const Location = () => {
                 src="/assets/images/locations/desktop/image-map-united-kingdom.png"
                 alt="img-united-kingdom"
                 className="united-kingdom-img"
+              />
+              <img
+                src="/assets/images/locations/tablet/image-map-uk.png"
+                alt="img-united-kingdom"
+                className="united-kingdom-img united-kingdom-img-tablet"
               />
             </div>
           </div>

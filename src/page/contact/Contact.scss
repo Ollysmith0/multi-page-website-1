@@ -102,10 +102,16 @@ body{
 
       @include relative;
 
+      @include tablet{
+        flex-direction: column;
+        width: 689px;
+        height: 711px;
+      }
+
       .oval-contact-bg{
         @include absolute{
-          left: 0;
-          bottom: 0;
+          left: -100px;
+          top: 0;
         }
 
         transform: translateY(-1rem);
@@ -124,6 +130,11 @@ body{
           align-items: center;
         }
         width: 60%;
+
+        @include tablet{
+          width: 100%;
+          padding: 71px 58px;
+        }
 
         .flex-box-contact{
           width: 540px;
@@ -147,6 +158,10 @@ body{
               font-size: 16px;
               line-height: 26px;
               width: 445px;
+
+              @include tablet{
+                width: 573px;
+              }
             }
           }
 
@@ -184,10 +199,21 @@ body{
       justify-content: space-evenly;
     }
 
+    @include tablet{
+      flex-direction: column;
+    }
+
     .canada{
       opacity: 0;
       transform: translateY(-1rem);
       transition: all .5s ease-in-out;
+
+      @include tablet{
+        margin-bottom: 32px;
+        opacity: 0;
+        transform: translateX(-1rem);
+        transition: all .5s ease-in-out;
+      }
 
       .canada-title{
         font-size: 20px;
@@ -226,6 +252,13 @@ body{
       transform: translateY(1rem);
       transition: all .5s ease-in-out;
 
+      @include tablet{
+        margin-bottom: 32px;
+        opacity: 0;
+        transform: translateX(1rem);
+        transition: all .5s ease-in-out;
+      }
+
       .australia-title{
         font-size: 20px;
         line-height: 26px;
@@ -262,6 +295,12 @@ body{
       opacity: 0;
       transform: translateY(-1rem);
       transition: all .5s ease-in-out;
+
+      @include tablet{
+        opacity: 0;
+        transform: translateX(-1rem);
+        transition: all .5s ease-in-out;
+      }
 
       .united-kingdom-title{
         font-size: 20px;

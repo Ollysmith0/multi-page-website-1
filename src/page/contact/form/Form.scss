@@ -7,6 +7,11 @@
   width: 380px;
   height: 371px;
 
+  @include tablet{
+    width: 540px;
+    height: 291px;
+  }
+
   div{
     @include relative;
 
@@ -41,9 +46,14 @@
       border-bottom: 1px ridge $white;
       background-color: $peach;
       color: $white;
+      background: transparent;
 
       @include relative;
       margin-bottom: 3rem;
+
+      @include tablet{
+        width: 573px;
+      }
     }
 
 
@@ -92,6 +102,10 @@
     padding: 17px 47px;
     background-color: $white;
     border-radius: 5px;
+
+    @include tablet{
+      margin: 0;
+    }
 
     &:hover{
       background-color: $peach-active;
