@@ -4,11 +4,13 @@
 @import '../../../styles/responsive.scss';
 
 .subscribe-form{
-  width: 380px;
+  max-width: 380px;
+  width: 100%;
   height: 371px;
 
   @include tablet{
-    width: 540px;
+    max-width: 540px;
+    width: 100%;
     height: 291px;
   }
 

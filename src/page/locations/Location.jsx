@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
 import "../locations/Location.scss";
 
 import Footer from "../home/components/Footer/Footer";
+import HeaderHome from "../home/components/Header-home/HeaderHome";
 
 import scrollingDetect from "../../styles/js/scrollingDetect";
 import scrollTopButton from "../../styles/js/scrollTopButton";
@@ -16,46 +16,17 @@ const Location = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
-      <header>
-        <div className="container">
-          <div className="content">
-            <div className="logo show-on-scroll">
-              <img
-                src="/assets/images/home/desktop/Oval.svg"
-                alt="Oval-logo"
-                className="oval"
-              ></img>
-              <img
-                src="/assets/images/home/desktop/DESIGNO.svg"
-                alt="DESIGNO-logo"
-                className="designo"
-              ></img>
-            </div>
-            <ul className="menu show-on-scroll">
-              <li className="item">
-                <NavLink to="/About" className="link">
-                  our company
-                </NavLink>
-              </li>
-              <li className="item">
-                <NavLink to="/Location" className="link">
-                  locations
-                </NavLink>
-              </li>
-              <li className="item">
-                <NavLink to="/Contact" className="link">
-                  contact
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
+    <>
+      <HeaderHome />
       <body>
         <div className="container-location">
           <div className="canada">
             <div className="flex-box-ca show-on-scroll">
+              <img
+                src="/assets/images/locations/mobile/canada-bg-location.svg"
+                alt="canada-bg-location"
+                className="canada-bg-location"
+              />
               <img
                 src="/assets/images/about/desktop/deal-content-bg.svg"
                 alt="deal-content-bg"
@@ -181,7 +152,7 @@ const Location = () => {
         </svg>
       </button>
       <Footer />
-    </div>
+    </>
   );
 };
 

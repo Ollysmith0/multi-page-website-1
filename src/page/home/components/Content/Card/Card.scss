@@ -6,17 +6,18 @@
 .card {
   width: 350px;
   height: 478px;
-  @include container;
+  
 
   @include tablet{
     width: 689px;
     height: 310px;
 
-    @include d-flex
+    @include d-flex;
+    position: initial;
   }
 
-  @include tablet{
-    position: initial;
+  @include mobile{
+    margin: 0 auto;
   }
 
   transform: translateY(1rem);

@@ -53,7 +53,6 @@ const contentSource = [
 const Graphicdesign = () => {
   useEffect(() => {
     document.getElementById("banner-bg").style.left = "0";
-    document.getElementById("card-layout").style.height = "333px";
   }, []);
   useEffect(() => {
     window.scrollTo(0, 0);

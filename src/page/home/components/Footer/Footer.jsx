@@ -8,45 +8,48 @@ const Footer = () => {
   useEffect(() => scrollingDetect(), []);
   useEffect(() => scrollTopButton(), []);
   return (
-    <div className="footer">
-      <div className="get-in-touch-banner show-on-scroll">
-        <div className="content-t">
-          <h1 className="title-t">Let’s talk about your project</h1>
-          <p className="para-t">
+    <div className="footer-design">
+      <div
+        className="get-in-touch-banner-design show-on-scroll"
+        id="get-in-touch-banner-design"
+      >
+        <div className="content-t-design">
+          <h1 className="title-t-design">Let’s talk about your project</h1>
+          <p className="para-t-design">
             Ready to take it to the next level? Contact us today and find out
             how our expertise can help your business grow.
           </p>
         </div>
-        <button className="get-touch-btn">get in touch</button>
+        <button className="get-touch-btn-design">get in touch</button>
       </div>
-      <div className="container-footer show-on-scroll">
-        <div className="content-f">
-          <div className="line1">
-            <div className="left-logo">
+      <div className="container-footer-design show-on-scroll">
+        <div className="content-f-design" id="content-f-design">
+          <div className="line1-design">
+            <div className="left-logo-design">
               <img
                 src="/assets/images/home/desktop/Oval.svg"
-                className="oval"
+                className="oval-design"
                 alt="oval"
               />
               <img
                 src="/assets/images/home/desktop/DESIGNO-white.svg"
                 alt="DESIGNO-logo"
-                className="DESIGNO-logo"
+                className="DESIGNO-logo-design"
               />
             </div>
-            <div className="right-nav">
-              <ul className="menu">
-                <li className="item">
+            <div className="right-nav-design show-on-scroll">
+              <ul className="menu-design">
+                <li className="item-design">
                   <NavLink to="/About" className="link">
                     our company
                   </NavLink>
                 </li>
-                <li className="item">
+                <li className="item-design">
                   <NavLink to="/Location" className="link">
                     locations
                   </NavLink>
                 </li>
-                <li className="item">
+                <li className="item-design">
                   <NavLink to="/Contact" className="link">
                     contact
                   </NavLink>
@@ -54,21 +57,21 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="line2">
-            <div className="address">
-              <p className="title-g">Designo Central Office</p>
-              <p className="para">
+          <div className="line2-design">
+            <div className="address-design show-on-scroll">
+              <p className="title-g-design">Designo Central Office</p>
+              <p className="para-design">
                 3886 Wellington Street Toronto, Ontario M9C 3J5
               </p>
             </div>
-            <div className="contact">
-              <p className="title-g">Contact Us (Central Office)</p>
-              <p className="phone-g">P : +1 253-863-8967</p>
-              <p className="mail-g">M : contact@designo.co</p>
+            <div className="contact-design show-on-scroll">
+              <p className="title-g-design">Contact Us (Central Office)</p>
+              <p className="phone-g-design">P : +1 253-863-8967</p>
+              <p className="mail-g-design">M : contact@designo.co</p>
             </div>
-            <ul className="social-nav">
+            <ul className="social-nav-design show-on-scroll">
               <li>
-                <a href="/#" className="social-links">
+                <a href="/#" className="social-links-design">
                   <svg
                     width="24"
                     height="24"

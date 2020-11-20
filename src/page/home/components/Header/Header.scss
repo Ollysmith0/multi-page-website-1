@@ -11,26 +11,30 @@
     max-height: 500px;
   }
 
-  .container{
+  .container-design{
     @include relative{
-      z-index: 2;
+      z-index: 1;
     }
 
     @include container{
       margin: 4rem auto;
     }
 
-    .content{
+    @include mobile{
+      margin: 0;
+    }
+
+    .content-design{
       @include d-flex{
         justify-content: space-between;
         align-items: center;
 
-        .logo{
+        .logo-design{
           opacity: 0;
           transform: translateX(-1rem);
           transition: all .5s ease-in-out;
 
-          .oval{
+          .oval-design{
             margin-right: 1rem;
           }
         }
@@ -40,7 +44,7 @@
           opacity: 1;
         }
 
-        .menu{
+        .menu-design{
           @include d-flex{
             justify-content: space-evenly;
             align-items: center;
@@ -50,7 +54,7 @@
           transform: translateX(1rem);
           transition: all .5s ease-in-out;
 
-          .item{
+          .item-design{
             margin-left: 2.625rem;
 
             a{
@@ -89,13 +93,9 @@
       }
     }
 
-    .banner{
-      @include absolute{
-        z-index: 2;
-      }
-
-      @include tablet{
-        @include relative;
+    .banner-design{
+      @include relative{
+        z-index: 1;
       }
       
       max-width: 1111px;
@@ -115,13 +115,33 @@
       @include tablet{
         width: 689px;
         height: 252px;
+        @include relative;
+      }
+
+      @include mobile{
+        margin: 0%;
+        border-radius: initial;
+        max-width: 480px;
+        width: 100%;
+        height: 320px;
       }
 
       transform: translateY(-1rem);
       opacity: 0;
       transition: all 1s ease-in-out;
 
-      .banner-tablet-bg{
+      .mobile-bg{
+        @include d-none;
+
+        @include mobile{
+          @include absolute{
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+
+      .banner-tablet-bg-design{
         display: none;
 
         @include tablet{
@@ -133,7 +153,7 @@
         }
       }
 
-      .content-b{
+      .content-b-design{
         text-align: center;
         color: $white;
         width: 411px;
@@ -145,13 +165,17 @@
           }
         }
 
-        .title-b{
+        @include mobile{
+          z-index: 2; 
+        }
+
+        .title-b-design{
           font-size: 48px;
           line-height: 48px;
           margin-bottom: 24px;
         }
 
-        .para-b{
+        .para-b-design{
           font-size: 16px;
           line-height: 26px;
         }
@@ -164,13 +188,17 @@
     }
   }
 
-  .rec-bg{
+  .rec-bg-design{
     width: 1006px;
     height: 594px;
+
+    @include mobile{
+      @include d-none;
+    }
   }
 }
 
-.banner-bg{
+.banner-bg-design{
   filter: brightness(.05);
   height: 584px;
   @include absolute{
@@ -179,6 +207,10 @@
   }
 
   @include tablet{
-    display: none;
+    @include d-none;
+  }
+
+  @include mobile{
+    @include d-none
   }
 }

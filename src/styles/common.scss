@@ -43,15 +43,23 @@
 }
 
 @mixin container {
+
   max-width: 1111px;
   width: 100%;
-  margin: 0 auto;
+  margin: 4rem auto;
   @content; 
 
   @include tablet{
     max-width: 689px;
     width: 100%;
-    margin: 0 auto;
+    margin: 4rem auto;
+    @content;
+  }
+
+  @include mobile{
+    max-width: 480px;
+    width: 100%;
+    margin: 0;
     @content;
   }
 }

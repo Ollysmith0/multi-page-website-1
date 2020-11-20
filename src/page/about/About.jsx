@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
 import "../about/About.scss";
 
 import Footer from "../home/components/Footer/Footer";
+import HeaderHome from "../home/components/Header-home/HeaderHome";
 
 import scrollingDetect from "../../styles/js/scrollingDetect";
 import scrollTopButton from "../../styles/js/scrollTopButton";
@@ -16,46 +16,17 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
-      <header>
-        <div className="container">
-          <div className="content">
-            <div className="logo show-on-scroll">
-              <img
-                src="/assets/images/home/desktop/Oval.svg"
-                alt="Oval-logo"
-                className="oval"
-              ></img>
-              <img
-                src="/assets/images/home/desktop/DESIGNO.svg"
-                alt="DESIGNO-logo"
-                className="designo"
-              ></img>
-            </div>
-            <ul className="menu show-on-scroll">
-              <li className="item">
-                <NavLink to="/About" className="link">
-                  our company
-                </NavLink>
-              </li>
-              <li className="item">
-                <NavLink to="/Location" className="link">
-                  locations
-                </NavLink>
-              </li>
-              <li className="item">
-                <NavLink to="/Contact" className="link">
-                  contact
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </header>
+    <>
+      <HeaderHome />
       <body>
         <div className="container-about">
           <div className="about-content">
             <div className="flex-box-a show-on-scroll">
+              <img
+                src="/assets/images/about/mobile/mobile-bg-about.svg"
+                alt="mobile-bg-about"
+                className="mobile-bg-about"
+              />
               <div className="content-a">
                 <h1 className="title-a">About Us</h1>
                 <p className="para-a">
@@ -100,6 +71,11 @@ const About = () => {
               />
             </div>
             <div className="flex-box-q show-on-scroll">
+              <img
+                src="/assets/images/about/mobile/world-class-bg-mobile.svg"
+                alt="world-class-bg-mobile"
+                className="world-class-bg"
+              />
               <div className="content-q">
                 <h1 className="title-q">World-class talent</h1>
                 <p className="para-q">
@@ -221,7 +197,7 @@ const About = () => {
         </svg>
       </button>
       <Footer />
-    </div>
+    </>
   );
 };
 
