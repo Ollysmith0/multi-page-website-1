@@ -222,7 +222,8 @@ body{
       background-image: url(../../styles/images/image-web-design-large.jpg);
       background-size: cover;
       background-repeat: no-repeat;
-      width: 541px;
+      max-width: 541px;
+      width: 100%;
       height: 640px;
       border-radius: 20px;
 
@@ -234,7 +235,8 @@ body{
       }
 
       @include mobile{
-        width: 350px;
+        max-width: 350px;
+        width: 100%;
         height: 350px;
         margin: auto;
         background-image: url(../../styles/images/mobile/image-web-design.jpg);
@@ -299,7 +301,8 @@ body{
         background-image: url(../../styles/images/image-app-design.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        width: 541px;
+        max-width: 541px;
+        width: 100%;
         height: 308px;
         border-radius: 20px;
 
@@ -311,7 +314,8 @@ body{
         }
 
         @include mobile{
-          width: 350px;
+          max-width: 350px;
+          width: 100%;
           height: 350px;
           margin: auto;
           background-image: url(../../styles/images/mobile/image-app-design.jpg);
@@ -368,7 +372,8 @@ body{
         background-image: url(../../styles/images/image-graphic-design.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-        width: 541px;
+        max-width: 541px;
+        width: 100%;
         height: 308px;
         border-radius: 20px;
 
@@ -380,7 +385,8 @@ body{
         }
 
         @include mobile{
-          width: 350px;
+          max-width: 350px;
+          width: 100%;
           height: 350px;
           margin: auto;
           background-image: url(../../styles/images/mobile/image-graphic-design.jpg);
@@ -477,7 +483,8 @@ body{
         transition: all 1s ease-in-out;
 
         @include mobile{
-          width: 327px;
+          max-width: 327px;
+          width: 100%;
           height: 412px;
 
           opacity: 0;
@@ -506,7 +513,8 @@ body{
         transition: all 1s ease-in-out;
 
         @include mobile{
-          width: 327px;
+          max-width: 327px;
+          width: 100%;
           height: 412px;
 
           opacity: 0;
@@ -532,7 +540,8 @@ body{
         }
 
         @include mobile{
-          width: 327px;
+          max-width: 327px;
+          width: 100%;
           height: 412px;
           
           opacity: 0;
