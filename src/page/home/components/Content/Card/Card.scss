@@ -4,12 +4,14 @@
 @import "../../../../../styles/responsive.scss";
 
 .card {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 478px;
   
 
   @include tablet{
-    width: 689px;
+    max-width: 689px;
+    width: 100%;
     height: 310px;
 
     @include d-flex;
@@ -25,11 +27,13 @@
   transition: all .5s ease-in-out;
 
   .card-bg {
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 320px;
 
     @include tablet{
-      width: 344.5px;
+      max-width: 344.5px;
+      width: 100%;
     }
 
     img {
@@ -40,7 +44,8 @@
 
       @include tablet{
         height: 310px;
-        width: 344.5px;
+        max-width: 344.5px;
+        width: 100%;
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
         border-top-right-radius: initial;
@@ -50,7 +55,8 @@
   }
 
   .content-card {
-    width: 350px;
+    max-width: 350px;
+    width: 100%;
     height: 158px;
     text-align: center;
     color: $black;
@@ -64,7 +70,8 @@
 
     @include tablet{
       height: 310px;
-      width: 344.5px;
+      max-width: 344.5px;
+      width: 100%;
       border-top-right-radius: 10px;
       border-bottom-right-radius: 10px;
       border-top-left-radius: initial;
@@ -86,7 +93,8 @@
     }
 
     .content-wrapper-card {
-      width: 286px;
+      max-width: 286px;
+      width: 100%;
       height: 94px;
 
       .title-card {
