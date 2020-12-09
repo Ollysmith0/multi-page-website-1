@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
 import scrollingDetect from "../../../../styles/js/scrollingDetect";
 import HeaderHome from "../Header-home/HeaderHome";

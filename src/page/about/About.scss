@@ -4,6 +4,7 @@
 @import '../../styles/responsive.scss';
 
 body{
+  overflow-x: hidden;
 
   .container-about{
     @include relative;

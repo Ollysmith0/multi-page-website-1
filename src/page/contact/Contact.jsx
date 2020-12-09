@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
 import HeaderHome from "../home/components/Header-home/HeaderHome";
 import Footer from "../home/components/Footer/Footer";
