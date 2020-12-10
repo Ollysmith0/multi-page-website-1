@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import scrollingDetect from "../../../../styles/js/scrollingDetect";
 import scrollTopButton from "../../../../styles/js/scrollTopButton";
+import "../Footer/Footer.scss";
 
 const Footer = () => {
   useEffect(() => scrollingDetect(), []);
