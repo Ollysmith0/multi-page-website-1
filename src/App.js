@@ -29,7 +29,7 @@ function App() {
       <Suspense fallback={<Loading />}>
         <Switch>
           <div className="App">
-            <Route exact path="/" exact component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/Webdesign" component={Webdesign} />
             <Route path="/Appdesign" component={Appdesign} />
             <Route path="/Graphicdesign" component={Graphicdesign} />
