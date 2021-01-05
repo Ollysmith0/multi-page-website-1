@@ -255,7 +255,8 @@
   .get-in-touch-banner-design{
     @include container;
     z-index: 2;
-    width: 100%;
+    width: calc(100% - 50px);
+    border-radius: 15px;
     max-height: 292px;
     height: 100%;
     background-image: url(../../../../styles/images/get-in-touch-bg.svg);
